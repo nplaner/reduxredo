@@ -128,7 +128,9 @@ For more information on reducers, refer to the Redux docs:
 
 ### Challenges
 
-In your skill builder, you created a personal loyalty card tracker.  For this unit, we'll be flipping the script on that idea and creating a loyalty card tracker for a supermarket. The application should have the following hierarchical structure:
+For this unit, we'll be creating a loyalty card tracker for a supermarket chain. The user of our application should be able to create new markets and add or delete loyalty cards from each them.  We'll want to be able to track the total number of markets, total number of cards, and distribution metrics of cards across all the markets.  
+
+The application should have the following hierarchical structure:
 
 ````   
 |-- App
