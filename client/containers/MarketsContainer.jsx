@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
 // import child components...
 
-const mapStateToProps = store => ({
+const mapStateToProps = state => ({
   // provide pertinent state here
 });
 
