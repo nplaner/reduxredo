@@ -11,10 +11,8 @@
 
 import React from 'react';
 
-const MarketDisplay = (props) => (
-  <div className="marketBox">
-
-  </div>
-);
+const MarketDisplay = (props) => {
+  return <div className="marketBox">123</div>;
+};
 
 export default MarketDisplay;

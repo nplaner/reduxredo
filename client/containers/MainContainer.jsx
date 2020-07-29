@@ -11,33 +11,26 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import from child components...
+import TotalsDisplay from '../components/TotalsDisplay.jsx';
+import MarketsContainer from './MarketsContainer.jsx';
 
-
-const mapStateToProps = state => ({
-  // add pertinent state here
+const mapStateToProps = (state) => ({
+  TotalCards: state.markets.totalCards,
+  TotalMarkets: state.markets.totalMarkets,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({});
 
-});
-
-class MainContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className="container">
-        <div className="outerBox">
-          <h1 id="header">MegaMarket Loyalty Cards</h1>
-          { /* Start adding components here... */ }
-        </div>
+const MainContainer = (props) => {
+  return (
+    <div className="container">
+      <div className="outerBox">
+        <h1 id="header">MegaMarket Loyalty Cards</h1>
+        <TotalsDisplay totalCards={props.TotalCards} totalMarkets={props.TotalMarkets} />
+        <MarketsContainer />
       </div>
-    )
-  }
-
-}
+    </div>
+  );
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
